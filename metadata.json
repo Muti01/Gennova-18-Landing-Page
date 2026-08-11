@@ -1,0 +1,8 @@
+{
+  "name": "18 Gennova Labs",
+  "description": "Plataforma de epigenética avanzada y nutrición de precisión con Gennova Coach AI.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}
