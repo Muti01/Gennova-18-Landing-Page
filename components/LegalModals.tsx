@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { X, ShieldAlert, FileText, Lock } from 'lucide-react';
 
 export type ModalType = 'privacy' | 'terms' | 'disclaimer' | null;
