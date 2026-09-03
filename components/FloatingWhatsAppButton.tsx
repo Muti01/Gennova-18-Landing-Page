@@ -3,7 +3,7 @@ import React from 'react';
 const FloatingWhatsAppButton = () => {
   return (
     <a
-      href="https://wa.me/51932818432"
+      href="https://wa.me/51932818432?text=Hola%20Gennova,%20acabo%20de%20conocer%20la%20evaluaci%C3%B3n%20de%20bienestar%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20funciona%20y%20c%C3%B3mo%20puedo%20agendar."
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 sm:bottom-10 sm:right-10 z-[100] group flex justify-center items-center"

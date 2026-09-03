@@ -1,6 +1,6 @@
 {
-  "name": "18 Gennova Labs",
-  "description": "Plataforma de epigenética avanzada y nutrición de precisión con Gennova Coach AI.",
+  "name": "Test Epigenético en Lima | Gennova",
+  "description": "Descubre tu biología con el mejor test epigenético en Lima de Gennova Labs. Evaluaciones de bienestar personalizadas para optimizar tus hábitos y nutrición.",
   "requestFramePermissions": [
     "microphone",
     "camera"
