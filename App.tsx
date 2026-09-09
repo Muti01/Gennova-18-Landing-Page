@@ -27,6 +27,7 @@ import {
   FinalCTASection,
   AppDownloadSection
 } from './components/LandingRebrandComponents';
+import Testimonials from './components/Testimonials';
 import Dashboard from './components/Dashboard';
 import AnimatedGLogo from './components/AnimatedGLogo';
 import { Menu, Instagram, Linkedin, Facebook, Twitter, Phone } from 'lucide-react';
@@ -141,6 +142,7 @@ const MainApp: React.FC = () => {
       <WhatYouGetSection />
       <OurSpecialistsSection />
       <WhoIsItForAndTransparency />
+      <Testimonials />
       <PricingSection />
       <FAQSection />
       <FinalCTASection />

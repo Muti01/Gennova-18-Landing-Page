@@ -1,0 +1,6 @@
+# Robots.txt for Gennova Labs
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.testepigeneticolima.com/sitemap.xml

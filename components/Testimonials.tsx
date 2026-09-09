@@ -71,25 +71,49 @@ const Testimonials: React.FC = () => {
                 <div>
                     <span className="text-black font-mono text-[10px] uppercase tracking-[0.4em] mb-4 block flex items-center gap-2 font-bold">
                         <span className="w-2 h-2 rounded-full bg-gennova-gold animate-pulse"></span>
-                        EVIDENCIA TANGIBLE
+                        EXPERIENCIA GENNOVA
                     </span>
                     <h2 className="text-4xl md:text-6xl font-serif text-black mb-4 leading-[0.95] tracking-tighter">
-                        Lo que sucede cuando <br/>
-                        <span className="italic text-gennova-gold">dejas de adivinar.</span>
+                        Nosotros te damos el mapa. <br/>
+                        <span className="italic text-gennova-gold">El compromiso es tuyo.</span>
                     </h2>
-                    <p className="text-gray-500 text-sm font-sans font-light max-w-md leading-relaxed">
-                        Resultados reales de personas que dejaron de adivinar y empezaron a optimizar. Esto es lo que sucede cuando tomas el control.
+                    <p className="text-gray-600 text-sm font-sans font-light max-w-lg leading-relaxed mb-4">
+                        La evaluación epigenética te entrega la precisión biológica que requieres; la verdadera transformación ocurre cuando decides llevar cada recomendación a tu vida diaria.
                     </p>
+                    {/* Rating badge */}
+                    <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-stone-100 border border-stone-200 text-xs">
+                        <div className="flex text-amber-500">
+                            {[1, 2, 3, 4, 5].map((s) => (
+                                <Star key={s} size={14} className="fill-current text-amber-500" />
+                            ))}
+                        </div>
+                        <span className="font-bold text-stone-900">4.9 / 5.0</span>
+                        <span className="text-stone-400">•</span>
+                        <span className="text-stone-600 font-medium">Valoración destacada de nuestra comunidad</span>
+                    </div>
                 </div>
                 
-                {/* Navigation Controls (Dark on White) */}
-                <div className="flex gap-3">
-                    <button onClick={() => scroll('left')} className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all active:scale-95 shadow-sm">
-                        <ChevronLeft size={20} />
-                    </button>
-                    <button onClick={() => scroll('right')} className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all active:scale-95 shadow-sm">
-                        <ChevronRight size={20} />
-                    </button>
+                {/* Actions & Navigation Controls */}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                    <a
+                        href="https://g.page/r/CcKBjF_R7hPhECE/review" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-5 py-2.5 rounded-full border border-stone-300 text-stone-700 text-xs font-semibold hover:bg-stone-900 hover:text-white hover:border-stone-900 transition-all shadow-sm flex items-center gap-2"
+                        title="Comparte tu experiencia en Google"
+                    >
+                        <Star size={14} className="text-amber-500 fill-current" />
+                        ¿Ya te evaluaste? Deja tu reseña
+                    </a>
+
+                    <div className="flex gap-2">
+                        <button onClick={() => scroll('left')} aria-label="Anterior testimonio" className="w-11 h-11 rounded-full border border-gray-200 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all active:scale-95 shadow-sm">
+                            <ChevronLeft size={18} />
+                        </button>
+                        <button onClick={() => scroll('right')} aria-label="Siguiente testimonio" className="w-11 h-11 rounded-full border border-gray-200 flex items-center justify-center text-black hover:bg-black hover:text-white transition-all active:scale-95 shadow-sm">
+                            <ChevronRight size={18} />
+                        </button>
+                    </div>
                 </div>
             </div>
 

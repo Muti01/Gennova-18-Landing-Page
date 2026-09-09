@@ -1,8 +1,11 @@
 {
-  "name": "Test Epigenético en Lima | Gennova",
-  "description": "Descubre tu biología con el mejor test epigenético en Lima de Gennova Labs. Evaluaciones de bienestar personalizadas para optimizar tus hábitos y nutrición.",
+  "name": "Test Epigenético en Lima, Perú | Precios desde S/ 680 | Gennova Labs",
+  "description": "Evaluación y test epigenético en Lima, Perú de Gennova Labs. Precios desde S/ 680, análisis de 96 biomarcadores, interpretación profesional y hábitos conscientes.",
   "requestFramePermissions": [
     "microphone",
     "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
   ]
 }

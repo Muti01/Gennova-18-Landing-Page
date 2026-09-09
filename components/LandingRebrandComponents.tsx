@@ -28,7 +28,7 @@ export const HeroSection: React.FC = () => {
           className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 shadow-[0_0_30px_rgba(0,158,158,0.15)]"
         >
           <span className="w-2 h-2 rounded-full bg-[#009E9E] animate-pulse"></span>
-          <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-stone-300 font-bold">Bienestar Preventivo & Optimización</span>
+          <span className="text-[10px] font-mono tracking-[0.2em] uppercase text-stone-300 font-bold">BIOMARCADORES & BIENESTAR CELULAR</span>
         </motion.div>
 
         <motion.h1 
@@ -37,8 +37,8 @@ export const HeroSection: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-5xl md:text-7xl lg:text-[5rem] font-serif text-white leading-[1.05] tracking-tight mb-8"
         >
-          Conoce mejor tu biología.<br />
-          <span className="italic text-[#009E9E] font-light">Toma mejores decisiones.</span>
+          La información que tu cuerpo expresa.<br />
+          <span className="italic text-[#009E9E] font-light">La dirección que tu bienestar requiere.</span>
         </motion.h1>
 
         <motion.p 
@@ -47,7 +47,7 @@ export const HeroSection: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-stone-400 text-lg md:text-xl font-light leading-relaxed max-w-3xl mb-12 font-sans"
         >
-          Descubre el test epigenético en Lima más avanzado. Una evaluación personalizada de bienestar que te ayuda a comprender indicadores relacionados con nutrición, metabolismo y factores ambientales para construir hábitos más conscientes.
+          Evaluamos biomarcadores epigenéticos determinantes en tu energía, digestión y balance celular. Obtén un reporte claro y un plan de acción guiado para construir hábitos con verdadero sentido biológico.
         </motion.p>
 
         <motion.div
@@ -79,8 +79,30 @@ export const HeroSection: React.FC = () => {
 // --- 1.5 SOCIAL PROOF SECTION ---
 export const SocialProofSection: React.FC = () => {
   return (
-    <section className="bg-white py-12 px-6 lg:px-12">
+    <section className="bg-white py-14 px-6 lg:px-12 border-b border-stone-100">
       <div className="max-w-6xl mx-auto flex flex-col items-center">
+        {/* Rating summary bar */}
+        <div className="mb-10 flex flex-wrap items-center justify-center gap-3 md:gap-6 px-6 py-3 rounded-full bg-stone-50 border border-stone-200/80 shadow-sm text-center">
+          <div className="flex items-center gap-1 text-amber-500">
+            {[1, 2, 3, 4, 5].map((s) => (
+              <svg key={s} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clipRule="evenodd" />
+              </svg>
+            ))}
+          </div>
+          <span className="text-sm font-semibold text-stone-800">
+            4.9 / 5.0
+          </span>
+          <span className="hidden sm:inline text-stone-300">|</span>
+          <span className="text-xs md:text-sm font-medium text-stone-600">
+            Evaluación de Bienestar y Optimización Personalizada en Lima
+          </span>
+          <span className="hidden sm:inline text-stone-300">|</span>
+          <span className="text-xs font-mono uppercase tracking-widest text-[#009E9E] font-bold">
+            98% Satisfacción
+          </span>
+        </div>
+
         <div className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-24 transition-all duration-700">
           <img src="/logo-epixlife.png" alt="Logo de Epixlife" loading="lazy" className="h-16 md:h-24 object-contain" />
           <img src="/certificaciones.png" alt="Certificaciones de la Biotecnología" loading="lazy" className="h-16 md:h-28 object-contain" />
@@ -581,11 +603,11 @@ export const PricingSection: React.FC = () => {
           
           <div className="text-4xl md:text-5xl font-light text-[#1e293b] mb-6">
             <span className="text-2xl text-stone-400 font-serif mr-2">Desde</span>
-            S/ 680 <span className="text-2xl text-stone-400 font-serif mx-2">hasta</span> S/ 2,600
+            S/ 680
           </div>
           
           <p className="text-stone-500 font-light mb-10 text-lg leading-relaxed">
-            Ofrecemos planes anuales que varían según el número de evaluaciones epigenéticas que desees realizarte durante el año. Todos incluyen la toma de muestra, informe detallado de 96 biomarcadores, sesión de interpretación, protocolo personalizado y seguimiento de 90 días.
+            Ofrecemos diversas opciones de evaluación adaptadas a tus objetivos de bienestar y frecuencia de seguimiento. Todos nuestros planes incluyen la toma de muestra, informe detallado de 96 biomarcadores, sesión de interpretación personalizada, protocolo a tu medida y acompañamiento continuo de 90 días.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -615,6 +637,7 @@ export const PricingSection: React.FC = () => {
 // --- 11. PREGUNTAS FRECUENTES ---
 export const FAQSection: React.FC = () => {
   const faqs = [
+    { q: "¿Cuánto cuesta el test epigenético en Lima, Perú y qué incluye?", a: "Nuestros planes de evaluación epigenética en Gennova inician desde S/ 680. Todos nuestros planes incluyen la toma de muestra folicular, el informe biotecnológico con 96 biomarcadores, una sesión de 60 minutos de interpretación médica y nutricional, un protocolo personalizado y acompañamiento durante 90 días." },
     { q: "¿Qué es una evaluación epigenética?", a: "Es un análisis que identifica cómo factores ambientales, nutricionales y de estilo de vida pueden estar influyendo en la expresión de tu biología." },
     { q: "¿Es lo mismo que un test genético?", a: "No. Un test genético lee tu ADN heredado (que no cambia). La evaluación epigenética observa la expresión actual basada en tu entorno, la cual es dinámica y modificable mediante hábitos." },
     { q: "¿Qué muestra se utiliza y es invasiva?", a: "Utilizamos una muestra de la raíz del cabello (bulbo folicular). Es un proceso completamente indoloro y no invasivo." },
