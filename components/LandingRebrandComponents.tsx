@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ArrowRight, Phone, CheckCircle2, ShieldCheck, 
-  ChevronDown, Activity, Zap, Heart, BrainCircuit, Sprout, Info, BookOpen
+  ChevronDown, Activity, Zap, Heart, BrainCircuit, Sprout, Info, BookOpen, Calendar
 } from 'lucide-react';
 
 const WHATSAPP_URL = "https://wa.me/51932818432?text=Hola%20Gennova,%20acabo%20de%20conocer%20la%20evaluaci%C3%B3n%20de%20bienestar%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20c%C3%B3mo%20funciona%20y%20c%C3%B3mo%20puedo%20agendar.";
@@ -590,7 +590,11 @@ export const WhoIsItForAndTransparency: React.FC = () => {
 };
 
 // --- 10. PRECIO ---
-export const PricingSection: React.FC = () => {
+interface PricingSectionProps {
+  onOpenSchedule?: () => void;
+}
+
+export const PricingSection: React.FC<PricingSectionProps> = ({ onOpenSchedule }) => {
   return (
     <section id="precio-test-epigenetico-lima" className="py-32 px-6 lg:px-12 bg-white">
       <div className="max-w-4xl mx-auto text-center">
@@ -611,21 +615,21 @@ export const PricingSection: React.FC = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button 
+              type="button"
+              onClick={onOpenSchedule}
+              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#1e293b] text-white font-semibold text-sm uppercase tracking-wider hover:bg-[#009E9E] transition-all shadow-lg shadow-[#1e293b]/10 flex items-center justify-center gap-2.5 cursor-pointer group"
+            >
+              <Calendar size={18} className="text-[#009E9E] group-hover:text-white transition-colors" />
+              <span>Agendar Evaluación</span>
+            </button>
             <a 
               href={WHATSAPP_URL} 
               target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#1e293b] text-white font-semibold text-sm uppercase tracking-wider hover:bg-[#009E9E] transition-colors shadow-lg shadow-[#1e293b]/10"
+              rel="noopener noreferrer" 
+              className="w-full sm:w-auto px-8 py-4 rounded-xl border border-stone-300 text-stone-600 font-semibold text-sm uppercase tracking-wider hover:bg-white hover:shadow-sm transition-all flex items-center justify-center gap-2"
             >
-              Quiero conocer más
-            </a>
-            <a 
-              href={WHATSAPP_URL} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl border border-stone-300 text-stone-600 font-semibold text-sm uppercase tracking-wider hover:bg-white hover:shadow-sm transition-all"
-            >
-              Hablar por WhatsApp
+              <span>Hablar por WhatsApp</span>
             </a>
           </div>
         </div>

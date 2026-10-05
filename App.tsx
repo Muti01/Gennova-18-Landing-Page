@@ -33,6 +33,7 @@ import AnimatedGLogo from './components/AnimatedGLogo';
 import { Menu, Instagram, Linkedin, Facebook, Twitter, Phone } from 'lucide-react';
 import FloatingWhatsAppButton from './components/FloatingWhatsAppButton';
 import { LegalModals, ModalType } from './components/LegalModals';
+import ScheduleModal from './components/ScheduleModal';
 
 const MainApp: React.FC = () => {
   const [firebaseUser, setFirebaseUser] = useState<User | null>(null);
@@ -41,6 +42,7 @@ const MainApp: React.FC = () => {
   const [biomarkers, setBiomarkers] = useState<Biomarker[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeModal, setActiveModal] = useState<ModalType>(null);
+  const [isScheduleOpen, setIsScheduleOpen] = useState(false);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (user) => {
@@ -143,7 +145,7 @@ const MainApp: React.FC = () => {
       <OurSpecialistsSection />
       <WhoIsItForAndTransparency />
       <Testimonials />
-      <PricingSection />
+      <PricingSection onOpenSchedule={() => setIsScheduleOpen(true)} />
       <FAQSection />
       <FinalCTASection />
       <AppDownloadSection />
@@ -208,6 +210,7 @@ const MainApp: React.FC = () => {
 
       <FloatingWhatsAppButton />
       <LegalModals activeModal={activeModal} onClose={() => setActiveModal(null)} />
+      <ScheduleModal isOpen={isScheduleOpen} onClose={() => setIsScheduleOpen(false)} />
     </div>
   );
 };
